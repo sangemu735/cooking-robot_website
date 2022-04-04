@@ -1,13 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Montserrat", sans-serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1 {
+    font-size: 20px !important;
+}
+
+.flex-container {
+    display: flex !important;
+}
+
+.fa-plus {
+    color: green;
+    margin: 5px;
+}
+
+.fa-minus {
+    color: red;
+    margin: 5px;
+}
+
+.fa-trash {
+    color: red;
+}
+
+.fa-trash:hover {
+    color: rgba(255, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.fa-circle-check {
+    color: white;
+    background-color: #9fff51;
+    font-size: 100px;
+}
+
+input {
+    margin-top: 10px !important;
+    box-shadow: none !important;
+}
+
+.admin-functions {
+    padding: 10px;
+    background-color: rgb(1, 1, 77);
+}
+
+.admin-functions li {
+    display: inline;
+    color: white;
+}
+
+.admin-functions li a {
+    color: white;
+    padding: 20px;
+    text-decoration: none;
+}
+
+.admin-functions li a:hover {
+    text-decoration: underline;
 }
