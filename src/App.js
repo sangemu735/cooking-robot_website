@@ -22,12 +22,12 @@ function App() {
         <div className="App">
             <Navigation />
             <Routes>
-                <Route path="/" exact element={<Home />} />
-                <Route path="/cart" element={<Carts />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/admin" element={<Admin />}>
+                <Route path={process.env.PUBLIC_URL + "/"} exact element={<Home />} />
+                <Route path={process.env.PUBLIC_URL + "/cart"} element={<Carts />} />
+                <Route path={process.env.PUBLIC_URL + "/register"} element={<Register />} />
+                <Route path={process.env.PUBLIC_URL + "/login"} element={<Login />} />
+                <Route path={process.env.PUBLIC_URL + "/orders"} element={<Orders />} />
+                <Route path={process.env.PUBLIC_URL + "/admin"} element={<Admin />}>
                     <Route path="userslist" element={<UsersList />} />
                     <Route path="orderslist" element={<OrdersList socket={socket} />} />
                     <Route path="productslist" element={<ProductsList />} />
