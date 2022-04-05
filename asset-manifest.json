@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "./static/css/main.9f3b4375.css",
-    "main.js": "./static/js/main.78e87bb4.js",
-    "static/js/787.c4e7f8f9.chunk.js": "./static/js/787.c4e7f8f9.chunk.js",
-    "index.html": "./index.html",
-    "main.9f3b4375.css.map": "./static/css/main.9f3b4375.css.map",
-    "main.78e87bb4.js.map": "./static/js/main.78e87bb4.js.map",
-    "787.c4e7f8f9.chunk.js.map": "./static/js/787.c4e7f8f9.chunk.js.map"
+    "main.css": "/cooking-robot_website/static/css/main.9f3b4375.css",
+    "main.js": "/cooking-robot_website/static/js/main.061efd1b.js",
+    "static/js/787.c4e7f8f9.chunk.js": "/cooking-robot_website/static/js/787.c4e7f8f9.chunk.js",
+    "index.html": "/cooking-robot_website/index.html",
+    "main.9f3b4375.css.map": "/cooking-robot_website/static/css/main.9f3b4375.css.map",
+    "main.061efd1b.js.map": "/cooking-robot_website/static/js/main.061efd1b.js.map",
+    "787.c4e7f8f9.chunk.js.map": "/cooking-robot_website/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f3b4375.css",
-    "static/js/main.78e87bb4.js"
+    "static/js/main.061efd1b.js"
   ]
 }
