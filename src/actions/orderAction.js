@@ -6,7 +6,11 @@ export const placeOrder = (subTotal) => async (dispatch, getState) => {
     const cartItems = getState().cartReducer.cartItems;
 
     try {
-        const response = await axios.post("/api/orders/placeorder", { subTotal, currentUser, cartItems });
+        const response = await axios.post("https://cooking-robot-api.herokuapp.com/api/orders/placeorder", {
+            subTotal,
+            currentUser,
+            cartItems,
+        });
         console.log(response);
         dispatch({ type: "PLACE_ORDER_SUCCESS" });
     } catch (error) {
@@ -21,7 +25,9 @@ export const getUserOrders = () => async (dispatch, getState) => {
     dispatch({ type: "GET_USER_ORDERS_REQUEST" });
 
     try {
-        const response = await axios.post("/api/orders/getuserorders", { userId: currentUser._id });
+        const response = await axios.post("https://cooking-robot-api.herokuapp.com/api/orders/getuserorders", {
+            userId: currentUser._id,
+        });
         console.log(response);
         dispatch({ type: "GET_USER_ORDERS_SUCCESS", payload: response.data });
     } catch (error) {
@@ -33,7 +39,7 @@ export const getAllOrders = () => async (dispatch, getState) => {
     dispatch({ type: "GET_ALL_ORDERS_REQUEST" });
 
     try {
-        const response = await axios.get("/api/orders/getallorders");
+        const response = await axios.get("https://cooking-robot-api.herokuapp.com/api/orders/getallorders");
         console.log(response);
         dispatch({ type: "GET_ALL_ORDERS_SUCCESS", payload: response.data });
     } catch (error) {
@@ -43,7 +49,9 @@ export const getAllOrders = () => async (dispatch, getState) => {
 
 export const deliverOrder = (orderId) => async (dispatch) => {
     try {
-        const response = await axios.post("/api/orders/deliverorder", { orderId });
+        const response = await axios.post("https://cooking-robot-api.herokuapp.com/api/orders/deliverorder", {
+            orderId,
+        });
         console.log(response);
         alert("Order Delivered");
         const orders = await axios.get("/api/orders/getallorders");
