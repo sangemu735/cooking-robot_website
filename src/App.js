@@ -22,12 +22,12 @@ function App() {
         <div className="App">
             <Navigation />
             <Routes>
-                <Route path="https://sangemu735.github.io/cooking-robot_website/" exact element={<Home />} />
-                <Route path="https://sangemu735.github.io/cooking-robot_website/cart" element={<Carts />} />
-                <Route path="https://sangemu735.github.io/cooking-robot_website/register" element={<Register />} />
-                <Route path="https://sangemu735.github.io/cooking-robot_website/login" element={<Login />} />
-                <Route path="https://sangemu735.github.io/cooking-robot_website/orders" element={<Orders />} />
-                <Route path="https://sangemu735.github.io/cooking-robot_website/admin" element={<Admin />}>
+                <Route path="/cooking-robot_website" exact element={<Home />} />
+                <Route path="/cooking-robot_website/cart" element={<Carts />} />
+                <Route path="/cooking-robot_website/register" element={<Register />} />
+                <Route path="/cooking-robot_website/login" element={<Login />} />
+                <Route path="/cooking-robot_website/orders" element={<Orders />} />
+                <Route path="/cooking-robot_website/admin" element={<Admin />}>
                     <Route path="userslist" element={<UsersList />} />
                     <Route path="orderslist" element={<OrdersList socket={socket} />} />
                     <Route path="productslist" element={<ProductsList />} />
