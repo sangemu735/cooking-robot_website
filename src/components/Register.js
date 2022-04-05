@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { registerUser } from "../actions/userAction";
 import Error from "./Error";
 import Loading from "./Loading";
@@ -85,9 +86,14 @@ export default function Register() {
                             REGISTER
                         </button>
                         <br />
-                        <a style={{ color: "black" }} href="/login" className="mt-2 fw-bold">
+                        <button
+                            as={Link}
+                            to="/login"
+                            style={{ border: "none", textDecoration: "underline" }}
+                            className="btn mt-2 fw-bold"
+                        >
                             Click Here To Login
-                        </a>
+                        </button>
                     </div>
                 </div>
             </div>
