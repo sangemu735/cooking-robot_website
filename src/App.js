@@ -15,19 +15,19 @@ import AddProducts from "./components/AddProducts";
 import EditProduct from "./components/EditProduct";
 import { io } from "socket.io-client";
 
-const socket = io("http://localhost:8000");
+const socket = io("https://cooking-robot-api.herokuapp.com:56085");
 
 function App() {
     return (
         <div className="App">
             <Navigation />
             <Routes>
-                <Route path="/" exact element={<Home />} />
-                <Route path="/cart" element={<Carts />} />
-                <Route path="/register" element={<Register />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/orders" element={<Orders />} />
-                <Route path="/admin" element={<Admin />}>
+                <Route path="https://sangemu735.github.io/cooking-robot_website/" exact element={<Home />} />
+                <Route path="https://sangemu735.github.io/cooking-robot_website/cart" element={<Carts />} />
+                <Route path="https://sangemu735.github.io/cooking-robot_website/register" element={<Register />} />
+                <Route path="https://sangemu735.github.io/cooking-robot_website/login" element={<Login />} />
+                <Route path="https://sangemu735.github.io/cooking-robot_website/orders" element={<Orders />} />
+                <Route path="https://sangemu735.github.io/cooking-robot_website/admin" element={<Admin />}>
                     <Route path="userslist" element={<UsersList />} />
                     <Route path="orderslist" element={<OrdersList socket={socket} />} />
                     <Route path="productslist" element={<ProductsList />} />
