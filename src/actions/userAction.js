@@ -29,7 +29,7 @@ export const loginUser = (user) => async (dispatch) => {
 export const logoutUser = (user) => (dispatch) => {
     localStorage.removeItem("currentUser");
     localStorage.removeItem("cartItems");
-    window.location.href = "/login";
+    window.location.href = process.env.PUBLIC_URL + "/login";
 };
 
 export const getAllUsers = () => async (dispatch) => {

@@ -15,7 +15,7 @@ export default function Login() {
 
     useEffect(() => {
         if (localStorage.getItem("currentUser")) {
-            window.location.href = "/";
+            window.location.href = process.env.PUBLIC_URL;
         }
     }, []);
 
