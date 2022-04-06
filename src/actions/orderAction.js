@@ -54,7 +54,7 @@ export const deliverOrder = (orderId) => async (dispatch) => {
         });
         console.log(response);
         alert("Order Delivered");
-        const orders = await axios.get("/api/orders/getallorders");
+        const orders = await axios.get("https://cooking-robot-api.herokuapp.com/api/orders/getallorders");
         dispatch({ type: "GET_ALL_ORDERS_SUCCESS", payload: orders.data });
     } catch (error) {
         console.log(error);

@@ -61,7 +61,7 @@ export const editProduct = (editedProduct) => async (dispatch) => {
         });
         console.log(response);
         dispatch({ type: "EDIT_PRODUCT_SUCCESS", payload: response.data });
-        window.location.href = "/admin/productslist";
+        window.location.href = process.env.PUBLIC_URL + "/admin/productslist";
     } catch (error) {
         dispatch({ type: "EDIT_PRODUCT_FAILED", payload: error });
     }
