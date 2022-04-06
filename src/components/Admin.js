@@ -9,7 +9,7 @@ export default function Admin() {
 
     useEffect(() => {
         if (!currentUser.isAdmin) {
-            window.location.href = "/";
+            window.location.href = process.env.PUBLIC_URL + "/";
         }
     }, []);
 
