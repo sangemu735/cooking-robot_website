@@ -22,7 +22,7 @@ export default function Product({ product }) {
             <p className="card-body">{product.desc}</p>
             <div className="flex-container position-absolute bottom-0 w-100 end-0">
                 <div className="m-1 w-100">
-                    <h1 className="mt-1">Prices: {product.price}</h1>
+                    <h1 className="mt-1">Prices: {product.price}VNĐ/1Kg</h1>
                 </div>
                 <div className="m-1 w-100">
                     <button className="btn btn-danger fw-bolder w-75" onClick={addtocart}>
