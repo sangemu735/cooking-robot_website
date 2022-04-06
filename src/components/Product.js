@@ -25,9 +25,6 @@ export default function Product({ product }) {
                     <h1 className="mt-1">Prices: {product.price}$</h1>
                 </div>
                 <div className="m-1 w-100">
-                    <button className="btn btn-danger fw-bolder">Modify</button>
-                </div>
-                <div className="m-1 w-100">
                     <button className="btn btn-danger fw-bolder" onClick={addtocart}>
                         Add
                     </button>
