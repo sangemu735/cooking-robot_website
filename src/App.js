@@ -15,7 +15,7 @@ import AddProducts from "./components/AddProducts";
 import EditProduct from "./components/EditProduct";
 import { io } from "socket.io-client";
 
-const socket = io("https://cooking-robot-api.herokuapp.com:56085");
+const socket = io("https://cooking-robot-api.herokuapp.com");
 
 function App() {
     return (

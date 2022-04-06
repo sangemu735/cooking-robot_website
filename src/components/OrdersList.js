@@ -15,12 +15,6 @@ export default function OrdersList({ socket }) {
         dispatch(getAllOrders());
     }, []);
 
-    // useEffect(() => {
-    //     const newSocket = io("http://localhost:8000");
-    //     setSocket(newSocket);
-    //     return () => newSocket.close();
-    // }, [setSocket]);
-
     function handleDeliver(order) {
         socket.emit("confirm_message", {
             orderId: order._id,
