@@ -11,16 +11,16 @@ export default function Product({ product }) {
     }
 
     return (
-        <div className="shadow-lg p-3 mb-5 bg-body rounded">
+        <div className="shadow-lg p-3 mb-5 bg-body rounded h-100 position-relative">
             <h1>{product.name}</h1>
             <img
                 src={product.img}
                 alt={product.alt}
-                className="img-fluid"
+                className="img-fluid card-img-top"
                 style={{ height: "200px", width: "300px" }}
             />
-            <p>{product.desc}</p>
-            <div className="flex-container">
+            <p className="card-body">{product.desc}</p>
+            <div className="flex-container position-absolute bottom-0 w-100 end-0">
                 <div className="m-1 w-100">
                     <h1 className="mt-1">Prices: {product.price}$</h1>
                 </div>
