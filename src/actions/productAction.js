@@ -31,7 +31,9 @@ export const filterProducts = (searchKey) => async (dispatch) => {
     dispatch({ type: "GET_PRODUCTS_REQUEST" });
     try {
         const response = await axios.get("https://cooking-robot-api.herokuapp.com/api/products/getallproducts");
-        filteredProducts = response.data.filter((product) => product.name.toLowerCase().includes(searchKey));
+        filteredProducts = response.data.filter((product) =>
+            product.name.toLowerCase().includes(searchKey.toLowerCase())
+        );
         dispatch({ type: "GET_PRODUCTS_SUCCESS", payload: filteredProducts });
     } catch (error) {
         dispatch({ type: "GET_PRODUCTS_FAILED", payload: error });

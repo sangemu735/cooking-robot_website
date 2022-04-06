@@ -14,10 +14,12 @@ export default function Confirm({ subTotal }) {
             <button
                 className="btn btn-warning fw-bolder"
                 onClick={() => {
-                    dispatch(placeOrder(subTotal));
-                    cartItems.map((item) => {
-                        return dispatch(deleteFromCart(item));
-                    });
+                    if (subTotal > 0) {
+                        dispatch(placeOrder(subTotal));
+                        cartItems.map((item) => {
+                            return dispatch(deleteFromCart(item));
+                        });
+                    }
                 }}
             >
                 Confirm
