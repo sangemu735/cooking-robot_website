@@ -62,14 +62,14 @@ export default function Login() {
                             LOGIN
                         </button>
                         <br />
-                        <button
-                            as={Link}
-                            to="/register"
-                            style={{ border: "none", textDecoration: "underline" }}
-                            className="btn mt-2 fw-bold"
-                        >
-                            Click Here To Register
-                        </button>
+                        <p className="mt-2 fw-bold">
+                            <Link
+                                to="/register"
+                                style={{ color: "black", border: "none", textDecoration: "underline" }}
+                            >
+                                Click Here To Register
+                            </Link>
+                        </p>
                     </div>
                 </div>
             </div>
