@@ -82,9 +82,11 @@ function Carts() {
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
-                        <button className="btn btn-primary">
-                            <Link to="/orders">Go to the orders</Link>
-                        </button>
+                        <p>
+                            <Link to="/orders" className="btn btn-primary">
+                                Go to the orders
+                            </Link>
+                        </p>
                     </Modal.Footer>
                 </div>
             </Modal>
