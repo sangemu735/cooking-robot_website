@@ -14,11 +14,6 @@ function Carts() {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = (subTotal) => {
-        if (subTotal > 0) {
-            setShow(true);
-        }
-    };
 
     return (
         <div>
@@ -67,7 +62,14 @@ function Carts() {
 
                 <div className="col-md-4 text-right">
                     <h2 style={{ fontsize: "45px" }}>SubTotal: {subTotal.toFixed(2)}$</h2>
-                    <button className="btn btn-warning btn-lg p-2" onClick={handleShow(subTotal)}>
+                    <button
+                        className="btn btn-warning btn-lg p-2"
+                        onClick={() => {
+                            if (subTotal > 0) {
+                                setShow(true);
+                            }
+                        }}
+                    >
                         <Confirm subTotal={subTotal.toFixed(2)} />
                     </button>
                 </div>
