@@ -25,7 +25,7 @@ export default function Product({ product }) {
                     <h1 className="mt-1">Prices: {product.price}$</h1>
                 </div>
                 <div className="m-1 w-100">
-                    <button className="btn btn-danger fw-bolder" onClick={addtocart}>
+                    <button className="btn btn-danger fw-bolder w-75" onClick={addtocart}>
                         Add
                     </button>
                 </div>
