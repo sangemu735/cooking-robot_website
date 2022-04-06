@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 import { addToCart, deleteFromCart } from "../actions/cartAction";
 import { Modal, Button } from "react-bootstrap";
 import Confirm from "./Confirm";
@@ -81,9 +82,9 @@ function Carts() {
                         <Button variant="secondary" onClick={handleClose}>
                             Close
                         </Button>
-                        <a className="btn btn-primary" href="/orders">
-                            Go to the orders
-                        </a>
+                        <button className="btn btn-primary">
+                            <Link to="/orders">Go to the orders</Link>
+                        </button>
                     </Modal.Footer>
                 </div>
             </Modal>
